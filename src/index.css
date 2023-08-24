@@ -1,13 +1,218 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.start-page {
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.start-page h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.start-page p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.start-page input {
+  width: 100%;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.start-page button {
+  width: fit-content;
+  display: inline;
+}
+
+.start-page button:hover {
+  background-color: #555e7d;
+}
+
+.welcome-page {
+  text-align: center;
+}
+
+.welcome-page h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.welcome-page button {
+  font-size: 40px;
+  width: fit-content;
+  display: inline;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: #ffffff;
+}
+
+body {
+  background-color: #7cc6fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background-color: #252d4a;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  /* Changed to column layout */
+  align-items: center;
+  /* Center content horizontally */
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  margin-top: 20px;
+  /* Added margin at the top */
+  text-align: center;
+  flex-direction: column;
+}
+
+.score-section img {
+  max-width: 80%;
+  /* Ensure the image doesn't exceed the container's width */
+  height: auto;
+  /* Maintain the image's aspect ratio */
+  margin-top: 20px;
+  /* Add margin for spacing */
+
+}
+
+.score-section p {
+  font-size: 16px;
+}
+
+.score-section button {
+  width: fit-content;
+  display: inline;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  /* Added margin at the bottom */
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+  margin-bottom: 10px;
+  /* Added margin between answer buttons */
+}
+
+button.selected {
+  background-color: #555e7d;
+  /* Changed color for selected button */
+}
+
+button.correct {
+  background-color: #2f922f;
+}
+
+button.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* Added margin at the top */
+}
+
+.button-section button {
+  width: fit-content;
+  margin-right: auto;
+}
+
+/* Smaller screens */
+@media (max-width: 767px) {
+  .app {
+    width: 90%;
+    /* Adjust the width for smaller screens */
+  }
+
+  .question-text {
+    font-size: 18px;
+    /* Adjust font size for question text */
+  }
+
+  button {
+    font-size: 14px;
+    /* Adjust font size for answer buttons */
+  }
 }
