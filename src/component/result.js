@@ -25,18 +25,33 @@ const mostAnswered = (arr) => {
     return mostDuplicatedValue;
 }
 
+const headerResult = (type) => {
+    switch (type) {
+        case AnswerTypes.A:
+            return <img src={require('../image/บำเพ็ญ-text.PNG')} alt='HeaderResult' />
+        case AnswerTypes.B:
+            return <img src={require('../image/สอน-text.PNG')} alt='HeaderResult' />
+        case AnswerTypes.C:
+            return <img src={require('../image/สวัส-text.PNG')} alt='HeaderResult' />
+        case AnswerTypes.D:
+            return <img src={require('../image/เรียน-text.PNG')} alt='HeaderResult' />
+        default:
+            return <img src={require('../image/บำเพ็ญ-text.PNG')} alt='HeaderResult' />
+    }
+}
+
 const imageMostAnswered = (type) => {
     switch (type) {
         case AnswerTypes.A:
-            return <img src={require('../image/typeA.jpeg')} alt='Result' />
+            return <img src={require('../image/บำเพ็ญ.PNG')} alt='Result' />
         case AnswerTypes.B:
-            return <img src={require('../image/typeB.png')} alt='Result' />
+            return <img src={require('../image/สอน.PNG')} alt='Result' />
         case AnswerTypes.C:
-            return <img src={require('../image/typeC.jpeg')} alt='Result' />
+            return <img src={require('../image/สวัส.PNG')} alt='Result' />
         case AnswerTypes.D:
-            return <img src={require('../image/typeD.jpeg')} alt='Result' />
+            return <img src={require('../image/เรียน.PNG')} alt='Result' />
         default:
-            return <img src={require('../image/typeA.jpeg')} alt='Result' />
+            return <img src={require('../image/บำเพ็ญ.PNG')} alt='Result' />
     }
 }
 
@@ -59,8 +74,8 @@ const resultComponent = (arr) => {
     const type = mostAnswered(arr)
     return (
         <div>
-            <h2>{type}</h2>
             <div className='result-content'>
+                {headerResult(type)}
                 {imageMostAnswered(type)}
             </div>
             <p>{describeText(type)}</p>

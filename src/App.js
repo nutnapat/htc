@@ -42,30 +42,34 @@ export default function App() {
 	}
 
 	return (
-		<div className='app'>
+		<div>
 			{startPage ?
 				(
-					<div className='welcome-page'>
-						<h2>Welcome to HTC Quiz App!</h2>
+					<div className='welcome-page modal-result'>
+						<img src={require('./image/บำเพ็ญ-text.PNG')} alt='Result' />
+						<p>Hill Tribe Club ขอต้อนรับทุกคนมาทำความรู้จักโครงต่าง ๆ ในค่ายของชมรมเรา ผ่านบททดสอบ HTC Personality ที่บ่งบอกความเป็นตัวคุณ <br/>ถ้าอยากรู้ว่าคุณเหมาะกับโครงอะไร ไปเริ่มเล่นกันเลย !</p>
 						<button onClick={() => handleStart()}>
 							Start
 						</button>
 					</div>
 				)
 				: showResult ? (
-					<div className='score-section'>
-						{resultComponent(selectedAnswers)}
-						<button
-							onClick={() => {
-								handleRestart();
-							}}
-						>
-							Restart
-						</button>
-						{contactComponent()}
+					<div className='modal-result'>
+						<div className='score-section'>
+							{resultComponent(selectedAnswers)}
+							<button
+								onClick={() => {
+									handleRestart();
+								}}
+							>
+								Restart
+							</button>
+							<p>สามารถติดตามพวกเราได้ที่</p>
+							{contactComponent()}
+						</div>
 					</div>
 				) : (
-					<>
+					<div className='modal-question'>
 						<div className='question-section'>
 							<div className='question-count'>
 								{/* <span>Question {currentQuestion + 1}</span>/{questions.length} */}
@@ -95,7 +99,7 @@ export default function App() {
 								{currentQuestion === questions.length - 1 ? 'Done' : 'Next'}
 							</button>
 						</div>
-					</>
+					</div>
 				)}
 		</div>
 	);
