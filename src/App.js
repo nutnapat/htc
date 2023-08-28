@@ -46,7 +46,7 @@ export default function App() {
 			{startPage ?
 				(
 					<div className='welcome-page modal-result'>
-						<img src={require('./image/บำเพ็ญ-text.PNG')} alt='Result' />
+						<img src={require('./image/โลโก้.PNG')} alt='Result' />
 						<p>Hill Tribe Club ขอต้อนรับทุกคนมาทำความรู้จักโครงต่าง ๆ ในค่ายของชมรมเรา ผ่านบททดสอบ HTC Personality ที่บ่งบอกความเป็นตัวคุณ <br/>ถ้าอยากรู้ว่าคุณเหมาะกับโครงอะไร ไปเริ่มเล่นกันเลย !</p>
 						<button onClick={() => handleStart()}>
 							Start

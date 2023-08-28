@@ -16,13 +16,13 @@
 .welcome-page button {
   background-color: #43C486;
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 15px;
   width: 200px;
   display: inline;
 }
 
 .welcome-page img {
-  max-width: 80%;
+  max-width: 100%;
 }
 
 body {
