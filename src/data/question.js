@@ -28,7 +28,7 @@ export const questions = [
         questionText: 'คำใดที่นิยามความเป็นคุณได้ดีที่สุด',
         answerOptions: [
             { answerText: 'ใจดี', type: AnswerTypes.B },
-            { answerText: 'ความคิดสร้างสรรค', type: AnswerTypes.C },
+            { answerText: 'ความคิดสร้างสรรค์', type: AnswerTypes.C },
             { answerText: 'ความท้าทายและสิ่งใหม่ๆ', type: AnswerTypes.D },
             { answerText: 'มุ่งมั่นและลงมือทำ', type: AnswerTypes.A },
         ],

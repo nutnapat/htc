@@ -78,7 +78,7 @@ const resultComponent = (arr) => {
                 {headerResult(type)}
                 {imageMostAnswered(type)}
             </div>
-            <p>{describeText(type)}</p>
+            {describeText(type)}
         </div>
     )
 }
